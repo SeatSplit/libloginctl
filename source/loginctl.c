@@ -60,8 +60,8 @@ int loginctl_get_sessions(Session **sessions) {
 
     g_strfreev(session_ids);
     return valid_sessions;
-// Cleanup on error
-    cleanup:
+    // Cleanup on error
+cleanup:
     for (int j = 0; j < valid_sessions; j++) {
         free((*sessions)[j].session);
         free((*sessions)[j].username);
@@ -73,6 +73,5 @@ int loginctl_get_sessions(Session **sessions) {
     *sessions = NULL;
     g_strfreev(session_ids);
     return -ENOMEM;
-    //
 }
 #endif // LOGINCTL_C
