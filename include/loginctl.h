@@ -34,7 +34,7 @@ typedef struct Session {
  *
  * @code
  * Session *sessions = NULL;
- * int num_sessions = sd_get_sessions(&sessions);
+ * int num_sessions = loginctl_get_sessions(&sessions);
  * if (num_sessions > 0) {
  *     for (int i = 0; i < num_sessions; i++) {
  *         // Process each session
