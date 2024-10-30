@@ -85,7 +85,5 @@ int main() {
         printf("  State: %s\n", sessions[i].state);
     }
 
-
-
     return 0;
 }
